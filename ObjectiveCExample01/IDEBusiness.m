@@ -38,4 +38,9 @@
                        rating:3];
 }
 
+
+-(NSString *)description{
+    return [NSString stringWithFormat:@"<%@: %@ %@ %d>", [self class], [self name], [self details], [self rating]];
+}
+
 @end
