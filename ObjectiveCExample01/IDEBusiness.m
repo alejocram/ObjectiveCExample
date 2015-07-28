@@ -10,4 +10,32 @@
 
 @implementation IDEBusiness
 
+//Metodos de clase
++(id)businessWithName:(NSString *)name
+              details:(NSString *)details
+               rating:(int)rating{
+    return [[self alloc] initWithName:name
+                              details:details
+                               rating:rating];
+}
+
+//Inicializador designado
+-(id)initWithName:(NSString *)name
+              details:(NSString *)details
+               rating:(int)rating{
+    if(self = [super init]){
+        _name = name;
+        _details = details;
+        _rating = rating;
+    }
+    return self;
+}
+
+//Inicializadores de conveniencia
+-(id)initWithName:(NSString *)name{
+    return [self initWithName:name
+                      details:@""
+                       rating:3];
+}
+
 @end
